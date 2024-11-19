@@ -1,0 +1,80 @@
+<div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+  <div class="top_banner">
+    <div class="wrap">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">세상모든향은 2002년설립되어 고객의 신뢰를 쌓아왔습니다.</div>
+          <div class="swiper-slide">세상모든향은 대한민국 NO.1향수전문쇼핑몰입니다.</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="top_banner_toggle">
+      <a>
+        <div class="ment">
+          <p>탑배너 열기</p>
+          <p>하루동안 닫기</p>
+        </div>
+        <div class="img">
+          <img th:src="@{/img/icon/top_close.png}" alt="top-close">
+        </div>
+      </a>
+    </div>
+    <div class="header_top">
+      <div class="wrap">
+        <div class="header_left">
+          <ul>
+            <li><a th:href="@{/question/list}">Q&A</a></li>
+            <li><a href="#">상품후기</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </div>
+        <div class="header_logo">
+          <a th:href="@{/}"><img th:src="@{/img/icon/top_logo.gif}" alt="logo"></a>
+        </div>
+        <div class="header_right">
+          <div class="header_right_top">
+            <ul>
+              <li><a href="#"><img th:src="@{/img/icon/btn_search.gif}" alt="serch"></a></li>
+              <li class="header_right_top_menu"><a href="#"><img th:src="@{/img/icon/btn_mypage.gif}" alt="mypage"></a></li>
+              <li><a href="#"><img th:src="@{/img/icon/btn_cart.gif}" alt="장바구니"></a></li>
+            </ul>
+          </div>
+          <div class="header_right_bottom">
+            <ul>
+              <li><a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인/회원가입</a>
+                  <a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a></li>
+              <li><a sec:authorize="isAnonymous()" th:href="@{/user/login}">- 로그인</a>
+                <a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">- 로그아웃</a></li>
+              <li><a th:href="@{/user/signup}">- 회원가입</a></li>
+              <li><a href="#">- 주문목록/배송조회</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="wrap">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#">여성향수</a></div>
+            <div class="swiper-slide"><a href="#">남성향수</a></div>
+            <div class="swiper-slide"><a href="#">남여공용</a></div>
+            <div class="swiper-slide"><a th:href="@{/page/a}">선물세트</a></div>
+            <div class="swiper-slide"><a href="#">향수공병</a></div>
+            <div class="swiper-slide"><a href="#">아울렛</a></div>
+            <div class="swiper-slide"><a href="#">화장품</a></div>
+            <div class="swiper-slide"><a href="#">캔들&홈센트</a></div>
+            <div class="swiper-slide"><a href="#">전체브랜드</a></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

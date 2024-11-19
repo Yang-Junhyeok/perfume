@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1, maximum-scale=1, shrink-to-fot=no">
+  <title>세상모든향</title>
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+
+  <script th:src="@{/js/main.js}"></script>
+</head>
+<body>
+
+<div layout:fragment="content">
+  <section class="s1">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="#"><img th:src="@{/img/event/main01.jpg}" alt="main1"></a></div>
+        <div class="swiper-slide"><a href="#"><img th:src="@{/img/event/main02.jpg}" alt="main2"></a></div>
+        <div class="swiper-slide"><a href="#"><img th:src="@{/img/event/main03.jpg}" alt="main3"></a></div>
+      </div>
+      <div class="btn">
+        <div class="swiper-pagination"></div>
+        <div class="play-pause">
+          <span class="play-btn"><img th:src="@{/img/icon/play-icon.png}" alt="play"></span>
+          <span class="pause-btn"><img th:src="@{/img/icon/pause-icon.png}" alt="stop"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s2">
+    <div class="wrap">
+      <div class="s2_left">
+        <a href="#"><img th:src="@{/img/event/main_ban01.jpg}" alt="main_ban01"></a>
+      </div>
+      <div class="s2_right">
+        <div class="s2_right_top">
+          <a href="#"><img th:src="@{/img/event/main_ban02.jpg}" alt="main_ban02"></a>
+        </div>
+        <div class="s2_right_bottom">
+          <a href="#"><img th:src="@{/img/event/main_ban03.jpg}" alt="main_ban03"></a>
+          <a href="#"><img th:src="@{/img/event/main_ban04.jpg}" alt="main_ban04"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s3">
+    <div class="wrap">
+      <h1>MD'S CHOICE</h1>
+      <p>MD가 자신있게 추천드리는 상품입니다.</p>
+      <div class="product">
+        <ul>
+          <li>
+            <a href="#"><img th:src="@{/img/model/472001000137.jpg}" alt="1번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[불가리] 불가리 옴니아 크리스탈린 EDT 100ml</p>
+              <b>222,000원</b> <u>33%</u> <em>148,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/401001000066.jpg}" alt="2번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[끌로에] 끌로에 오드퍼퓸 EDP 50ml세트(향수50ml+바디로션100ml)</p>
+              <b>165,000원</b> <u>46%</u> <em>89,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/519002000004.jpg}" alt="3번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[에르메스] 에르메스 H24 EDT 50ml</p>
+              <b>109,000원</b> <u>46%</u> <em>59,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/220001000002.jpg}" alt="4번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[필로소피] 필로소피 퓨어 그레이스 EDT 60ml</p>
+              <b>79,000원</b> <u>52%</u> <em>38,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/231003000001.jpg}" alt="5번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[마리나드부르봉] 마리나드부르봉 무슈 르 프린스 엘리건트 EDP 100ml</p>
+              <b>102,000원</b> <u>48%</u> <em>53,000원</em>
+              <br>
+              <img th:src="@{/img/icon/28256.jfif}" alt="new">
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/221001000013.jpg}" alt="6번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[구딸] 구딸 쁘띠쉐리 EDP 30ml (신형)</p>
+              <b>160,000원</b> <u>51%</u> <em>79,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/472002000090.jpg}" alt="7번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[불가리] 불가리 맨 레인 에센스 EDP 60ml</p>
+              <b>141,000원</b> <u>35%</u> <em>92,000원</em>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img th:src="@{/img/model/519001000039.jpg}" alt="8번향수"></a>
+            <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+            <div class="info">
+              <p>[에르메스] 에르메스 트윌리 데르메스 오 프와브레 EDP 85ml</p>
+              <b>202,000원</b> <u>38%</u> <em>125,000원</em>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="s4">
+    <div class="wrap">
+      <h1>NEW ARRIVAL</h1>
+      <p>이제 막 갓 나온 따끈 따끈한 신제품입니다.</p>
+      <span># 완전 핫 신상</span><span># 지금방금</span><span># 뽑았어요</span>
+      <div class="swiper_wrap">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/472002000089.jpg}" alt="1">
+                <div class="info">
+                  <p>[불가리] 불가리 맨 글레이셜 에센스 EDP 60ml</p>
+                  <b>141,000원</b>
+                  <em>92,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/233001000018.jpg}" alt="2">
+                <div class="info">
+                  <p>[메종마르지엘라] 메종마르지엘라 레플리카 스프링타임 인 어 파크 EDT 100ml</p>
+                  <b>215,000원</b>
+                  <em>134,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/566002000103.jpg}" alt="3">
+                <div class="info">
+                  <p>[캘빈클라인] 캘빈클라인 디파이 EDT 50ml</p>
+                  <b>100,000원</b>
+                  <em>43,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/231001000020.jpg}" alt="4">
+                <div class="info">
+                  <p>[마리나드부르봉] 마리나드부르봉 크리스탈 로얄 로 EDP 50ml ★(오렌지 클러치+랜덤쇼핑백) 증정+무료배송★</p>
+                  <b>86,000원</b>
+                  <em>52,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/242001000001.jpg}" alt="5">
+                <div class="info">
+                  <p>[코치] 코치 EDT 90ml</p>
+                  <b>130,000원</b>
+                  <em>61,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/243001000001.jpg}" alt="6">
+                <div class="info">
+                  <p>[발렌티노] 발렌티노 도나 본 인 로마 EDP 50ml</p>
+                  <b>198,000원</b>
+                  <em>131,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/394001000069.jpg}" alt="7">
+                <div class="info">
+                  <p>[구찌] 구찌 플로라 골저스 자스민 EDP 30ml</p>
+                  <b>142,000원</b>
+                  <em>76,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/212003000001.jpg}" alt="8">
+                <div class="info">
+                  <p>[입생로랑] 입생로랑 와이 EDT 100ml</p>
+                  <b>191,000원</b>
+                  <em>129,000원</em>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <img th:src="@{/img/model/472001000137.jpg}" alt="9">
+                <div class="info">
+                  <p>[불가리] 불가리 옴니아 크리스탈린 EDT 100ml</p>
+                  <b>222,000원</b>
+                  <em>148,000원</em>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s5">
+    <div class="wrap">
+      <h1>BEST ITEM</h1>
+      <p>시선집중! 베스트상품!</p>
+      <div class="tab-patisyeon">
+        <div class="tabs">
+          <button class="tab-button active" onclick="(event, 'tab1')">WOMAN BEST</button>
+          <button class="tab-button" onclick="(event, 'tab2')">MAN BEST</button>
+          <button class="tab-button" onclick="(event, 'tab3')">UNISEX BEST</button>
+          <button class="tab-button" onclick="(event, 'tab4')">OTHER BEST</button>
+        </div>
+        <div id="tab1" class="tab-content active">
+          <div class="tab-inside">
+            <div class="pop_product">
+              <img th:src="@{/img/model/401001000066.jpg}" alt="1">
+              <a href="#">
+                <p>[끌로에] 끌로에 오드퍼퓸 EDP 50ml세트(향수50ml+바디로션100ml)</p>
+                <b>165,000원</b>
+                <u>46%</u>
+                <em>89,000원</em>
+              </a>
+            </div>
+            <ul>
+              <li>
+                <img th:src="@{/img/model/7350020000362.jpg}" alt="2">
+                <a href="#">
+                  <p>[지미추] 지미추 로 EDT 90ml</p>
+                  <b>158,000원</b>
+                  <u>59%</u>
+                  <em>65,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5190010000262.jpg}" alt="3">
+                <a href="#">
+                  <p>[에르메스] 에르메스 운 자르뎅 수르닐 EDT 50ml</p>
+                  <b>116,000원</b>
+                  <u>21%</u>
+                  <em>92,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/4180010000052.jpg}" alt="4">
+                <a href="#">
+                  <p>[라리끄] 라리끄 아메시스트 EDP 100ml</p>
+                  <b>133,000원</b>
+                  <u>65%</u>
+                  <em>46,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/4010010000602.jpg}" alt="5">
+                <a href="#">
+                  <p>[끌로에] 끌로에 노마드 EDT 75ml</p>
+                  <b>174,000원</b>
+                  <u>51%</u>
+                  <em>85,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/1850010000092.jpg}" alt="6">
+                <a href="#">
+                  <p>[조말론] 조말론 우드 세이지 앤 씨 쏠트 코롱 100ml</p>
+                  <b>218,000원</b>
+                  <u>24%</u>
+                  <em>165,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/3940010000592.jpg}" alt="7">
+                <a href="#">
+                  <p>[구찌] 구찌 블룸 EDP 30ml</p>
+                  <b>105,000원</b>
+                  <u>38%</u>
+                  <em>65,000원</em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="tab2" class="tab-content">
+          <div class="tab-inside">
+            <div class="pop_product">
+              <img th:src="@{/img/model/415002000026.jpg}" alt="1">
+              <a href="#">
+                <p>[돌체앤가바나] 돌체앤가바나 라이트 블루 뿌르 옴므 EDT 125ml</p>
+                <b>137,000원</b>
+                <u>49%</u>
+                <em>65,000원</em>
+              </a>
+            </div>
+            <ul>
+              <li>
+                <img th:src="@{/img/model/4720020000902.jpg}" alt="2">
+                <a href="#">
+                  <p>[불가리] 불가리 맨 레인 에센스 EDP 60ml</p>
+                  <b>141,000원</b>
+                  <u>35%</u>
+                  <em>92,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/2070010000262.jpg}" alt="3">
+                <a href="#">
+                  <p>[버버리] 버버리 클래식 포 맨 EDT 50ml</p>
+                  <b>77,000원</b>
+                  <u>49%</u>
+                  <em>39,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/4070020000172.jpg}" alt="4">
+                <a href="#">
+                  <p>[다비도프] 다비도프 쿨워터 리본 EDT 125ml</p>
+                  <b>101,000원</b>
+                  <u>55%</u>
+                  <em>45,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5660020000892.jpg}" alt="5">
+                <a href="#">
+                  <p>[캘빈클라인] 캘빈클라인 CK ALL EDT 100ml</p>
+                  <b>73,000원</b>
+                  <u>56%</u>
+                  <em>32,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/4720020000482.jpg}" alt="6">
+                <a href="#">
+                  <p>[불가리] 불가리 블루 옴므 EDT 50ml</p>
+                  <b>99,000원</b>
+                  <u>15%</u>
+                  <em>84,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/4680020000122.jpg}" alt="7">
+                <a href="#">
+                  <p>[베르사체] 베르사체 에로스 EDT 100ml</p>
+                  <b>130,000원</b>
+                  <u>52%</u>
+                  <em>62,000원</em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="tab3" class="tab-content">
+          <div class="tab-inside">
+            <div class="pop_product">
+              <img th:src="@{/img/model/566002000087.jpg}" alt="1">
+              <a href="#">
+                <p>[캘빈클라인] 캘빈클라인 CK ONE 골드 EDT 100ml</p>
+                <b>89,000원</b>
+                <u>52%</u>
+                <em>43,000원</em>
+              </a>
+            </div>
+            <ul>
+              <li>
+                <img th:src="@{/img/model/4150010000022.jpg}" alt="2">
+                <a href="#">
+                  <p>[돌체앤가바나] 돌체앤가바나 라이트 블루 EDT 100ml</p>
+                  <b>142,000원</b>
+                  <u>45%</u>
+                  <em>78,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/7270010000912.jpg}" alt="3">
+                <a href="#">
+                  <p>[클린] 클린 프레쉬 린넨 EDP 30ml</p>
+                  <b>57,000원</b>
+                  <u>54%</u>
+                  <em>26,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/1890010000112.jpg}" alt="4">
+                <a href="#">
+                  <p>[딥티크] 딥티크 롬브르단로 EDT 50ml</p>
+                  <b>176,000원</b>
+                  <u>18%</u>
+                  <em>145,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5250010000092.jpg}" alt="5">
+                <a href="#">
+                  <p>[엘리자베스아덴] 엘리자베스아덴 그린티 센트 스프레이 100ml</p>
+                  <b>55,000원</b>
+                  <u>68%</u>
+                  <em>17,500원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5660020000052.jpg}" alt="6">
+                <a href="#">
+                  <p>[캘빈클라인] 캘빈클라인 CK ONE EDT 200ml</p>
+                  <b>124,000원</b>
+                  <u>64%</u>
+                  <em>45,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5660020001032.jpg}" alt="7">
+                <a href="#">
+                  <p>[캘빈클라인] 캘빈클라인 디파이 EDT 50ml</p>
+                  <b>108,000원</b>
+                  <u>60%</u>
+                  <em>43,000원</em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="tab4" class="tab-content">
+          <div class="tab-inside">
+            <div class="pop_product">
+              <img th:src="@{/img/model/223001000001.jpg}" alt="1">
+              <a href="#">
+                <p>[스윗던] 스윗던 이지리필 향수공병 5ml</p>
+                <b>18,000원</b>
+                <u>64%</u>
+                <em>6,500원</em>
+              </a>
+            </div>
+            <ul>
+              <li>
+                <img th:src="@{/img/model/6060060000052.jpg}" alt="2">
+                <a href="#">
+                  <p>[세상모든향] 럭셔리 선물포장</p>
+                  <em>5,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/5660060000112.jpg}" alt="3">
+                <a href="#">
+                  <p>[캘빈클라인] 캘빈클라인 이터너티 포 맨 애프터쉐이브 로션(스킨) 100ml</p>
+                  <b>80,000원</b>
+                  <u>51%</u>
+                  <em>39,500원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/2230020000012.jpg}" alt="4">
+                <a href="#">
+                  <p>[스윗던] 스윗던 디퓨저 200ml</p>
+                  <b>36,000원</b>
+                  <u>67%</u>
+                  <em>12,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/2310020000012.jpg}" alt="5">
+                <a href="#">
+                  <p>[마리나드부르봉] 마리나드부르봉 크리스탈 로얄 로즈 바디로션 150ml</p>
+                  <b>12,000원</b>
+                  <u>33%</u>
+                  <em>8,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/1570010000072.jpg}" alt="6">
+                <a href="#">
+                  <p>[샤리올] 손잡이 파우치</p>
+                  <em>5,000원</em>
+                </a>
+              </li>
+              <li>
+                <img th:src="@{/img/model/2310020000022.jpg}" alt="7">
+                <a href="#">
+                  <p>[마리나드부르봉] 마리나드부르봉 골든 다이너스티 바디로션 100ml</p>
+                  <b>18,000원</b>
+                  <u>56%</u>
+                  <em>8,000원</em>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s6">
+    <div class="wrap">
+      <div class="ment">
+        <h1><b>TI</b>ME DEAL</h1>
+        <p>지금이 아니면 이 가격에 살수 없어요.</p>
+        <span>#눈물의 가격</span><span>#사장님이</span><span>#미쳣어요</span>
+      </div>
+      <ul>
+        <li>
+          <a href="#"><img th:src="@{/img/model/2010020000072.jpg}" alt="1"></a>
+          <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+          <p>[리플레이] 리플레이 시그니처 리버스 포 맨 EDT 50ml</p>
+          <b>58,000원</b> <u>56%</u> <em>25,500원</em>
+        </li>
+        <li>
+          <a href="#"><img th:src="@{/img/model/0100010000062.jpg}" alt="2"></a>
+          <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+          <p>[로샤스] 로샤스 마드모아젤 로샤스 EDT 30ml</p>
+          <b>60,000원</b> <u>66%</u> <em>20,500원</em>
+        </li>
+        <li>
+          <a href="#"><img th:src="@{/img/model/2200010000032.jpg}" alt="3"></a>
+          <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+          <p>[필로소피] 필로소피 어메이징 그레이스 EDT 15ml</p>
+          <b>35,000원</b> <u>49%</u> <em>18,000원</em>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s7">
+    <div class="wrap">
+      <div class="left">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img th:src="@{/img/event/ban_event01.jpg}" alt="1"></div>
+            <div class="swiper-slide"><img th:src="@{/img/event/ban_event02.jpg}" alt="2"></div>
+            <div class="swiper-slide"><img th:src="@{/img/event/ban_event03.jpg}" alt="3"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="border">
+          <div class="ment">
+            <h2>소중한 <span>고객님 후기</span></h2>
+            <b>매달 추첨을 통해 베스트 후기 1분에게 적립금을 드려요!</b>
+          </div>
+          <div class="border_list">
+            <ul>
+              <li><a href="#">ment</a></li>
+              <li><a href="#">ment</a></li>
+              <li><a href="#">ment</a></li>
+              <li><a href="#">ment</a></li>
+              <li><a href="#">ment</a></li>
+              <li><a href="#">ment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

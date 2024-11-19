@@ -1,0 +1,52 @@
+.qna-s1 {
+    margin-top: 70px;
+}
+.qna-s1 .wrap .qna-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.qna-s1 .wrap .qna-top h2 {
+    font-size: 17px;
+}
+.qna-s1 .wrap .qna-top > div {
+    display: flex;
+    align-items: center;
+}
+.qna-s1 .wrap .qna-top .check {
+    font-size: 11px;
+}
+.qna-s1 .wrap .qna-top .check input  {
+    width: 20px;
+}
+
+.qna-s1 .wrap .qna-top .search input{
+    margin-left: 10px;
+    font-size: 17px;
+    width: 190px;
+}
+
+.qna-s1 .wrap .qna-bottom {
+    height: 100%;
+}
+.qna-s1 .wrap .qna-bottom table{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #111;
+    border-collapse: collapse;
+}
+.qna-s1 .wrap .qna-bottom table tr td {
+    border-bottom: 1px solid #111;
+    padding: 10px;
+
+}
+.qna-s1 .wrap .qna-bottom table tr:first-child td:nth-child(2) {
+    text-align: center;
+}
+.qna-s1 .wrap .qna-bottom table tr td:first-child {
+    width: 8%;
+}
+.qna-s1 .wrap .qna-bottom table tr td:nth-child(2) {
+    width: 72%;
+    text-align: left;
+}

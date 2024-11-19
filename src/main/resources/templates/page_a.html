@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1, maximum-scale=1, shrink-to-fot=no">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/page_a.css/}">
+</head>
+<body>
+    <div layout:fragment="content">
+        <section class="side-s1">
+            <div class="wrap">
+                <p><a href="index.html">HOME</a> > <a href="sidemap.html">향수세트</a></p>
+                <h1>향수세트</h1>
+                <div class="boxs">
+                    <div class="category">
+                        <div class="category-top">
+                            <h2>카테고리</h2>
+                        </div>
+                        <div class="category-bottom">
+                            <ul>
+                                <li><a href="#">여성용<span>(5)</span></a></li>
+                                <li><a href="#">남성용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="products-box">
+                        <div class="title">
+                            <ul>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">상품명</a></li>
+                                <li><a href="#">클릭순</a></li>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">높은가격</a></li>
+                                <li><a href="#">낮은가격</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <ul>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/472001000137.jpg}" alt="1번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[불가리] 불가리 옴니아 크리스탈린 EDT 100ml</p>
+                                        <b>222,000원</b> <u>33%</u> <em>148,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/401001000066.jpg}" alt="2번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[끌로에] 끌로에 오드퍼퓸 EDP 50ml세트(향수50ml+바디로션100ml)</p>
+                                        <b>165,000원</b> <u>46%</u> <em>89,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/519002000004.jpg}" alt="3번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[에르메스] 에르메스 H24 EDT 50ml</p>
+                                        <b>109,000원</b> <u>46%</u> <em>59,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/220001000002.jpg}" alt="4번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[필로소피] 필로소피 퓨어 그레이스 EDT 60ml</p>
+                                        <b>79,000원</b> <u>52%</u> <em>38,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/231003000001.jpg}" alt="5번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[마리나드부르봉] 마리나드부르봉 무슈 르 프린스 엘리건트 EDP 100ml</p>
+                                        <b>102,000원</b> <u>48%</u> <em>53,000원</em>
+                                        <br>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/221001000013.jpg}" alt="6번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[구딸] 구딸 쁘띠쉐리 EDP 30ml (신형)</p>
+                                        <b>160,000원</b> <u>51%</u> <em>79,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/472002000090.jpg}" alt="7번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[불가리] 불가리 맨 레인 에센스 EDP 60ml</p>
+                                        <b>141,000원</b> <u>35%</u> <em>92,000원</em>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img th:src="@{/img/model/519001000039.jpg}" alt="8번향수"></a>
+                                    <a href="#"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p>[에르메스] 에르메스 트윌리 데르메스 오 프와브레 EDP 85ml</p>
+                                        <b>202,000원</b> <u>38%</u> <em>125,000원</em>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

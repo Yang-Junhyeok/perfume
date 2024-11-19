@@ -1,0 +1,92 @@
+
+footer {
+    background-color: #efefef;
+    height: 315px;
+    margin-top: 100px;
+}
+footer .footer_top {
+    height: 35px;
+}
+footer .footer_top .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer_top .wrap ul {
+    display: flex;
+}
+footer .footer_top .wrap ul li {
+    position: relative;
+    margin-left: 17px;
+}
+footer .footer_top .wrap ul li:first-child{
+    margin-left:0;
+}
+footer .footer_top .wrap ul li::after{
+    content: "|";
+    position: absolute;
+    right: -10px;
+    top: 3px;
+    font-size: 13px;
+}
+footer .footer_top .wrap ul li:last-child:after{
+    content: "";
+}
+footer .footer_top .wrap ul:first-child li a {
+    font-size: 10px;
+}
+footer .footer_top .wrap ul:last-child li a {
+    font-size: 11px;
+}
+
+
+footer .footer_center {
+    height: 120px;
+    background-color: #fff;
+}
+footer .footer_center .wrap table{
+    padding: 25px 0 20px;
+    width: 55%;
+    height: 100%;
+}
+footer .footer_center .wrap table tr {
+    margin-right: 100px;
+}
+footer .footer_center .wrap table tr:first-child td {
+    font-size: 13px;
+}
+footer .footer_center .wrap table tr:last-child td {
+    font-size: 11.5px;
+    color: #aaa;
+}
+footer .footer_center .wrap table tr:last-child td:first-child {
+    font-weight: bold;
+    font-size: 33px;
+    color: #111;
+}
+footer .footer_center .wrap table tr:last-child td:nth-child(2) {
+    width: 40%;
+}
+
+footer address {
+    width: 100%;
+}
+footer address .wrap {
+    margin-top: 30px;
+}
+footer address .wrap p:first-child {
+    font-style: normal;
+    color: #7a7a7a;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+footer address .wrap p a {
+    font-size: 15px;
+    color: #7a7a7a;
+}
+footer address .wrap p:last-child {
+    font-size: 12px;
+    font-style: normal;
+    color: #7a7a7a;
+}
