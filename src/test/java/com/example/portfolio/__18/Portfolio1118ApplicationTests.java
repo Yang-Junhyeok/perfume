@@ -1,0 +1,13 @@
+package com.example.portfolio.__18;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class Portfolio1118ApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

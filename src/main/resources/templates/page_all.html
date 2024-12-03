@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layouts/layout}" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1, maximum-scale=1, shrink-to-fot=no">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/page_a.css/}">
+</head>
+<body>
+    <div layout:fragment="content">
+        <section class="side-s1">
+            <div class="wrap">
+                <p><a href="index.html">HOME</a> > <a href="sidemap.html">향수세트</a></p>
+                <h1>향수세트</h1>
+                <div class="boxs">
+                    <div class="category">
+                        <div class="category-top">
+                            <h2>카테고리</h2>
+                        </div>
+                        <div class="category-bottom">
+                            <ul>
+                                <li><a href="#">여성용<span>(5)</span></a></li>
+                                <li><a href="#">남성용</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="products-box">
+                        <div class="title">
+                            <ul>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">상품명</a></li>
+                                <li><a href="#">클릭순</a></li>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">높은가격</a></li>
+                                <li><a href="#">낮은가격</a></li>
+                            </ul>
+                        </div>
+                        <form th:action="@{'/admin/items/' + ${items.number}}" role="form" method="get" th:object="${items}">
+                        <div class="products">
+                            <ul>
+                                <li th:each="item, status: ${items.getContent()}">
+                                    <a th:href="'/item/' +${item.id}">
+                                        <img th:src="${item.imgUrl}" th:alt="${item.itemNm}">
+                                    </a>
+                                    <a th:href="'/item/' +${item.id}"><img th:src="@{/img/icon/search_btn.png}" alt="search"></a>
+                                    <div class="info">
+                                        <p th:text="${item.itemNm}"></p>
+                                        <b th:text="${item.price}"></b> <u th:text="${item.sale}+'%'"></u> <em th:text="${item.price} - ${item.price} * ${item.sale}/100"></em>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                            <div th:with="start=${(items.number/maxPage)*maxPage + 1}, end=(${(items.totalPages == 0) ? 1 : (start + (maxPage - 1) < items.totalPages ? start + (maxPage - 1) : items.totalPages)})" >
+                                <ul>
+
+                                    <li th:classappend="${items.first}?'disabled'">
+                                        <a th:onclick="'javascript:page(' + ${items.number - 1} + ')'" aria-label='Previous' class="page-link">
+                                            <span aria-hidden='true'>Previous</span>
+                                        </a>
+                                    </li>
+
+                                    <li th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${items.number eq page-1}?'active':''">
+                                        <a th:onclick="'javascript:page(' + ${page - 1} + ')'" th:inline="text" class="page-link">[[${page}]]</a>
+                                    </li>
+
+                                    <li th:classappend="${items.last}?'disabled'">
+                                        <a th:onclick="'javascript:page(' + ${items.number + 1} + ')'" aria-label='Next' class="page-link">
+                                            <span aria-hidden='true'>Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

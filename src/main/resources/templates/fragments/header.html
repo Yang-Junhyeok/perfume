@@ -1,0 +1,85 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<div th:fragment="header">
+  <div class="top_banner">
+    <div class="wrap">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">세상모든향은 2002년설립되어 고객의 신뢰를 쌓아왔습니다.</div>
+          <div class="swiper-slide">세상모든향은 대한민국 NO.1향수전문쇼핑몰입니다.</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="top_banner_toggle">
+      <a>
+        <div class="ment">
+          <p>탑배너 열기</p>
+          <p>하루동안 닫기</p>
+        </div>
+        <div class="img">
+          <img th:src="@{/img/icon/top_close.png}" alt="top-close">
+        </div>
+      </a>
+    </div>
+    <div class="header_top">
+      <div class="wrap">
+        <div class="header_left">
+          <ul>
+            <li><a th:href="@{/question/list}">Q&A</a></li>
+            <li><a href="#">상품후기</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a th:href="@{/admin/item/new}" sec:authorize="isAuthenticated()">상품등록</a></li>
+          </ul>
+        </div>
+        <div class="header_logo">
+          <a th:href="@{/}"><img th:src="@{/img/icon/top_logo.gif}" alt="logo"></a>
+        </div>
+        <div class="header_right">
+          <div class="header_right_top">
+            <ul>
+              <li><a href="#"><img th:src="@{/img/icon/btn_search.gif}" alt="serch"></a></li>
+              <li class="header_right_top_menu"><a href="#"><img th:src="@{/img/icon/btn_mypage.gif}" alt="mypage"></a></li>
+              <li><a href="#"><img th:src="@{/img/icon/btn_cart.gif}" alt="장바구니"></a></li>
+            </ul>
+          </div>
+          <div class="header_right_bottom">
+            <ul>
+              <li><a sec:authorize="isAnonymous()" th:href="@{/members/login}">로그인</a>
+                  <a sec:authorize="isAuthenticated()" th:href="@{/members/logout}">로그아웃</a></li>
+              <li><a sec:authorize="isAnonymous()" th:href="@{/members/login}">- 로그인</a>
+                <a sec:authorize="isAuthenticated()" th:href="@{/members/logout}">- 로그아웃</a></li>
+              <li><a th:href="@{/members/new}">- 회원가입</a></li>
+              <li><a href="#">- 주문목록/배송조회</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom">
+      <div class="wrap">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a th:href="@{/admin/items}">상품관리</a></div>
+            <div class="swiper-slide"><a th:href="@{/orders}">구매이력</a></div>
+            <div class="swiper-slide"><a th:href="@{/cart}">장바구니</a></div>
+            <div class="swiper-slide"><a th:href="@{/admin/perfume}">향수</a></div>
+            <div class="swiper-slide"><a th:href="@{/admin/shop}">향수병</a></div>
+            <div class="swiper-slide"><a th:href="@{/admin/outlet}">아울렛</a></div>
+            <div class="swiper-slide"><a href="#">기타</a></div>
+            <div class="swiper-slide"><a href="#">캔들&홈센트</a></div>
+            <div class="swiper-slide"><a th:href="@{/admin/showitem}">전체브랜드</a></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+</html>
