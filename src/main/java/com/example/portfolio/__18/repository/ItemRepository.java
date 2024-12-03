@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.repository.query.Param;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item>,ItemRepositoryCustom {
@@ -18,6 +19,8 @@ public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredi
 
     //파라미터로 넘어온 price 변수보다 값이 작은 상품 데이터를 가격이 높은 순으로 조회하는 메서드
     List<Item> findByPriceLessThanOrderByPriceDesc(int price);
+
+    List<Item> findByRegTimeOrderByRegTime(LocalDateTime regTime);
 
     @Query(value = "select i from Item i where i.itemDetail like %:itemDetail% order by i.price desc", nativeQuery = true)
     List<Item> findByItemDetail(@Param("itemDetail") String itemDetail);

@@ -19,8 +19,8 @@
                         </div>
                         <div class="category-bottom">
                             <ul>
-                                <li><a href="#">여성용<span>(5)</span></a></li>
-                                <li><a href="#">남성용</a></li>
+                                <li><a href="#">판매중<span th:if="${sell}" th:text="'('+${sell}+')'"></span></a></li>
+                                <li><a href="#">매진<span th:if="${soldOut}" th:text="'('+${soldOut}+')'"></span></a></li>
                             </ul>
                         </div>
                     </div>

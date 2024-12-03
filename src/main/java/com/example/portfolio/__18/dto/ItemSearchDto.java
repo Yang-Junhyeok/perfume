@@ -12,7 +12,7 @@ public class ItemSearchDto {
 
     private ItemSellStatus searchSellStatus;
 
-    private ItemPosition itemPosition;
+    private ItemPosition searchItemPosition;
 
     private String searchBy;
 

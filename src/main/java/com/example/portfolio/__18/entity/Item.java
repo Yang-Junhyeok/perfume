@@ -55,6 +55,7 @@ public class Item extends BaseEntity{
         this.stockNumber = itemFormDto.getStockNumber();
         this.itemDetail = itemFormDto.getItemDetail();
         this.itemSellStatus = itemFormDto.getItemSellStatus();
+        this.itemPosition = itemFormDto.getItemPosition();
     }
 
     public void removeStock(int stockNumber){

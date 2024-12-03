@@ -18,19 +18,13 @@
         <option value="SOLD_OUT">품절</option>
       </select>
     </div>
-    <div th:field="*{itemPosition}">
-      <label>
-        <input type="checkbox" name="options" value="PERFUME"> PERFUME
-      </label>
-      <label>
-        <input type="checkbox" name="options" value="SHOP"> Shop
-      </label>
-      <label>
-        <input type="checkbox" name="options" value="OUTLET"> Outlet
-      </label>
-      <label>
-        <input type="checkbox" name="options" value="ETC"> Etc
-      </label>
+    <div>
+      <select th:field="*{itemPosition}">
+        <option value="PERFUME">PERFUME</option>
+        <option value="SHOP">SHOP</option>
+        <option value="OUTLET">OUTLET</option>
+        <option value="ETC">ETC</option>
+      </select>
     </div>
     <div>
       <div>

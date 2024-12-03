@@ -39,7 +39,7 @@
                         <div class="products">
                             <ul>
                                 <li th:each="item, status: ${items.getContent()}">
-                                    <div th:if="${item.itemPosition == T(com.example.portfolio.__18.constant.ItemPosition).PERFUME}">
+                                    <div th:if="${item.itemPosition == T(com.example.portfolio.__18.constant.ItemPosition).SHOP}">
                                         <a th:href="'/item/' +${item.id}">
                                             <img th:src="${item.imgUrl}" th:alt="${item.itemNm}">
                                         </a>

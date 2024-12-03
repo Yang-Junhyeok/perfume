@@ -1,5 +1,7 @@
 package com.example.portfolio.__18.controller;
 
+import com.example.portfolio.__18.constant.ItemPosition;
+import com.example.portfolio.__18.constant.ItemSellStatus;
 import com.example.portfolio.__18.dto.ItemFormDto;
 import com.example.portfolio.__18.dto.ItemSearchDto;
 import com.example.portfolio.__18.dto.ShowItemDto;
@@ -107,11 +109,16 @@ public class ItemController {
         model.addAttribute("maxPage",5);
         return "page_a-1";
     }
+
 //전체브랜드
     @GetMapping("/admin/showitem")
     public String showall(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
         Pageable pageable = PageRequest.of(page, 8);
         Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
+        Long count = items.stream().filter(item -> item.getItemSellStatus() == ItemSellStatus.SELL).count();
+        Long count2 = items.stream().filter(item -> item.getItemSellStatus() == ItemSellStatus.SOLD_OUT).count();
+        model.addAttribute("sell", count);
+        model.addAttribute("soldOut", count2);
         model.addAttribute("items", items);
 //        model.addAttribute("itemSearchDto", itemSearchDto);
         model.addAttribute("maxPage", 5);
@@ -122,20 +129,54 @@ public class ItemController {
     public String perfume(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
         Pageable pageable = PageRequest.of(page, 8);
         Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
+        Long count = items.stream().filter(item -> item.getItemPosition() == ItemPosition.PERFUME && item.getItemSellStatus() == ItemSellStatus.SELL).count();
+        Long count2 = items.stream().filter(item -> item.getItemPosition() == ItemPosition.PERFUME && item.getItemSellStatus() == ItemSellStatus.SOLD_OUT).count();
+        model.addAttribute("sell", count);
+        model.addAttribute("soldOut", count2);
         model.addAttribute("items", items);
         model.addAttribute("maxPage", 5);
         return "page_perfume";
     }
+    //shop
+    @GetMapping("/admin/shop")
+    public String shop(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
+        Pageable pageable = PageRequest.of(page, 8);
+        Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
+        Long count = items.stream().filter(item -> item.getItemPosition() == ItemPosition.SHOP && item.getItemSellStatus() == ItemSellStatus.SELL).count();
+        Long count2 = items.stream().filter(item -> item.getItemPosition() == ItemPosition.SHOP && item.getItemSellStatus() == ItemSellStatus.SOLD_OUT).count();
+        model.addAttribute("sell", count);
+        model.addAttribute("soldOut", count2);
+        model.addAttribute("items", items);
+        model.addAttribute("maxPage", 5);
+        return "page_shop";
+    }
+    //outlet
+    @GetMapping("/admin/outlet")
+    public String outlet(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
+        Pageable pageable = PageRequest.of(page, 8);
+        Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
+        Long count = items.stream().filter(item -> item.getItemPosition() == ItemPosition.OUTLET && item.getItemSellStatus() == ItemSellStatus.SELL).count();
+        Long count2 = items.stream().filter(item -> item.getItemPosition() == ItemPosition.OUTLET && item.getItemSellStatus() == ItemSellStatus.SOLD_OUT).count();
+        model.addAttribute("sell", count);
+        model.addAttribute("soldOut", count2);
+        model.addAttribute("items", items);
+        model.addAttribute("maxPage", 5);
+        return "page_outlet";
+    }
 
-//    @GetMapping("/admin/showitem")
-//    public String show_a(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
-//        Pageable pageable = PageRequest.of(page, 8);
-//        Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
-//        model.addAttribute("items", items);
-//        model.addAttribute("itemSearchDto", itemSearchDto);
-//        model.addAttribute("maxPage", 5);
-//        return "page_all";
-//    }
+    //etc
+    @GetMapping("/admin/etc")
+    public String etc(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){
+        Pageable pageable = PageRequest.of(page, 8);
+        Page<ShowItemDto> items = itemService.getShowItemPage(itemSearchDto,pageable);
+        Long count = items.stream().filter(item -> item.getItemPosition() == ItemPosition.ETC && item.getItemSellStatus() == ItemSellStatus.SELL).count();
+        Long count2 = items.stream().filter(item -> item.getItemPosition() == ItemPosition.ETC && item.getItemSellStatus() == ItemSellStatus.SOLD_OUT).count();
+        model.addAttribute("sell", count);
+        model.addAttribute("soldOut", count2);
+        model.addAttribute("items", items);
+        model.addAttribute("maxPage", 5);
+        return "page_etc";
+    }
 
     @GetMapping("/item/{itemId}")
     public String itemDtl(Model model, @PathVariable("itemId") Long itemId){

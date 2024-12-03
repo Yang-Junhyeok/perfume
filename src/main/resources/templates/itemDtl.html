@@ -187,6 +187,7 @@
             <div th:unless="${item.itemSellStatus == T(com.example.portfolio.__18.constant.ItemSellStatus).SELL}">
                 <button type="button">품절</button>
             </div>
+            <li th:text="${item.itemPosition}"></li>
         </div>
     </div>
 

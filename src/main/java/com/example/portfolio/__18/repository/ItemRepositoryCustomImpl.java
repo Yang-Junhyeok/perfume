@@ -1,5 +1,6 @@
 package com.example.portfolio.__18.repository;
 
+import com.example.portfolio.__18.constant.ItemPosition;
 import com.example.portfolio.__18.constant.ItemSellStatus;
 import com.example.portfolio.__18.dto.ItemSearchDto;
 import com.example.portfolio.__18.dto.QShowItemDto;
@@ -28,10 +29,11 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom{
     public ItemRepositoryCustomImpl(EntityManager em){
         this.queryFactory = new JPAQueryFactory(em);
     }
-//4
     private BooleanExpression searchSellStatusEq(ItemSellStatus searchSellStatus){
-        //5
         return searchSellStatus == null ? null : QItem.item.itemSellStatus.eq(searchSellStatus);
+    }
+    private BooleanExpression searchItemPositionEq(ItemPosition searchItemPosition){
+        return searchItemPosition == null ? null : QItem.item.itemPosition.eq(searchItemPosition);
     }
 
     private BooleanExpression regDtsAfter(String searchDateType){
@@ -71,6 +73,7 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom{
                 .selectFrom(QItem.item)
                 .where(regDtsAfter(itemSearchDto.getSearchDateType()),
                         searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
+                        searchItemPositionEq(itemSearchDto.getSearchItemPosition()),
                         searchByLike(itemSearchDto.getSearchBy(),
                                 itemSearchDto.getSearchQuery()))
                 .orderBy(QItem.item.id.desc())
@@ -81,6 +84,7 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom{
         long total = queryFactory.select(Wildcard.count).from(QItem.item)
                 .where(regDtsAfter(itemSearchDto.getSearchDateType()),
                         searchSellStatusEq(itemSearchDto.getSearchSellStatus()),
+                        searchItemPositionEq(itemSearchDto.getSearchItemPosition()),
                         searchByLike(itemSearchDto.getSearchBy(), itemSearchDto.getSearchQuery()))
                 .fetchOne()
                 ;
@@ -105,7 +109,9 @@ public class ItemRepositoryCustomImpl implements ItemRepositoryCustom{
                                 item.itemDetail,
                                 itemImg.imgUrl,
                                 item.price,
-                                item.sale
+                                item.sale,
+                                item.itemPosition,
+                                item.itemSellStatus
                                 )
                 )
                 .from(itemImg)
