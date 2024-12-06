@@ -94,6 +94,7 @@ public class ItemController {
         return "redirect:/";
     }
 
+    
 
 //    value 에 상품 관리 화면 진입 시 URL에 페이지 번호가 없는 경우와 페이지 번호가 있는 경우 2가지를 매핑
     @GetMapping({"/admin/items", "/admin/items/{page}"})
@@ -124,6 +125,7 @@ public class ItemController {
         model.addAttribute("maxPage", 5);
         return "page_all";
     }
+
 //향수
     @GetMapping("/admin/perfume")
     public String perfume(ItemSearchDto itemSearchDto, @RequestParam(name="page",defaultValue = "0") Integer page, Model model){

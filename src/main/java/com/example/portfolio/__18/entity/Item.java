@@ -54,7 +54,11 @@ public class Item extends BaseEntity{
         this.price = itemFormDto.getPrice();
         this.stockNumber = itemFormDto.getStockNumber();
         this.itemDetail = itemFormDto.getItemDetail();
-        this.itemSellStatus = itemFormDto.getItemSellStatus();
+        if(itemFormDto.getStockNumber() < 1){
+            this.itemSellStatus = ItemSellStatus.SOLD_OUT;
+        }else{
+            this.itemSellStatus = ItemSellStatus.SELL;
+        }
         this.itemPosition = itemFormDto.getItemPosition();
     }
 
@@ -64,6 +68,11 @@ public class Item extends BaseEntity{
             throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고 수량 : " + this.stockNumber +"개입니다.)");
         }
         this.stockNumber = restStock;
+        if (this.stockNumber < 1){
+            this.itemSellStatus = ItemSellStatus.SOLD_OUT;
+        }else {
+            this.itemSellStatus = ItemSellStatus.SELL;
+        }
     }
 
     public void addStock(int stockNumber){
